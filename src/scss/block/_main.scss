@@ -1,0 +1,82 @@
+.main {
+    background-color: #cd2044;
+    box-shadow: 2px 9px 13px 5px #cd2044;
+    padding: 25px 0;
+}
+
+.header__log {
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.auto {
+    line-height: 45px;
+}
+.login, .registr{
+    color: #f1efef;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .4s;
+}
+.login{
+    padding: 10px;
+    &:hover{
+        background-color: rgba(241, 102, 92, 0.411);
+    }
+}
+.registr{
+    padding: 10px;
+    &:hover{
+        background-color: rgba(241, 102, 92, 0.411);
+    }
+}
+.header__info {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__search {
+    position: relative;
+    width: 55%;
+    height: 50px;
+    input{
+        width: 100%;
+        height: 100%;
+        padding: 10px 10px 10px 20px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        &:focus{
+            &::placeholder{
+                text-indent: 100%;
+                transition: .4s;
+            }
+        }
+    }
+    button{
+        right: 0;
+        top: 15px;
+        position: absolute;
+        background-color: transparent;
+        border:none;
+        outline: none;
+        &::before{
+            content:"\1F50D";
+        }
+    }
+}
+.header__basket {
+    img{
+        display: block;
+        width: 45px;
+        height: 40px;
+    }
+}

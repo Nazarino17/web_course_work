@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration user</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <form action="" id="registr" onsubmit="validate(event)">
+        <p>
+            <label class="label" for="name">Ім'я</label>
+            <input class="input" type="text" placeholder="Введіть Ім'я"name="name">
+        </p>
+        <p>
+            <label class="label" for="email">Пошта</label>
+            <input class="input" type="email" placeholder="Введіть пошту" name="email">
+        </p>
+        <p>
+            <label class="label" for="password">Пароль</label>
+            <input id="NewPassword" class="input" type="password" placeholder="Введіть пароль" name="Npassword" onkeypress="register()" required>
+            <input id="RTPassword" class="input" type="password" placeholder="Повторіть пароль" name="RTpassword" required>
+            <div id="divCheckPassword"></div>
+        </p>
+        
+        <input class="btn-registr" type="submit" value="Реєстрація">
+        
+    </form>
+
+
+    <script src="../js/RTPassword.js"></script>
+</body>
+</html>
