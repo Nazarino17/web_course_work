@@ -1,0 +1,37 @@
+p{
+    display: flex;
+    flex-direction: column;
+}
+.input{
+    outline: none;
+    border:1px solid #e4d4d4;
+    padding: 7px;
+}
+.label{
+    font-size: 18px;
+    color: #435d6a;
+    font-weight: 600;
+    padding-left: 11px;
+}
+#registr{
+    padding: 10px 13px;
+    width: 300px;
+    margin: 100px auto 0 auto;
+    background-color: #f6f6f6;
+    border-radius: 7px;
+    box-shadow: 0 0 11px 0px #ffe1e1 inset;
+}
+.btn-registr{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    color: #413f3f;
+    font-size: 20px;
+    border-radius: 0 0 10px 10px;
+    background-color: #fac4c4;
+    transition: .4s;
+    &:hover{
+        box-shadow: 0 0 7px 0px #ff5353;
+    }
+}

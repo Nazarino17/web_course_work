@@ -1,0 +1,128 @@
+.catalog {
+    padding-top: 70px;
+    &__text{
+        background-color: #855e5e78;
+        border-radius: 20px;
+        padding: 0 5px 0 8px;
+        line-height: 50px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 30px;
+        color: #f1efef;
+        padding-left: 50px;
+    }
+}
+
+.catalog__menu {
+    display: flex;
+}
+.catalog__list {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 0;
+    &-item{
+        list-style: none;
+        width: 340px;
+        height: 60px;
+        margin: 5px;
+      
+    }
+    &-link{
+        font-weight: 700;
+        font-size: 20px;
+        color: #353535e8;
+        width: 100%;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        height: 100%;
+        background-color: #3f393942;
+        text-decoration: none;
+        text-align: center;
+        line-height: 60px;
+        position: relative;
+        display: block;
+        transition: .4s;
+        &:hover{
+           box-shadow: 6px 6px 7px 1px #8c8c8c;
+        }
+    }
+    &-link.active{
+        border-radius: 30px 0 30px 0;
+        box-shadow: -2px -3px 6px 0px #8c8c8c;
+    }
+}
+
+.catalog__tabs{
+    width: 100%;
+}
+
+.catalog__tab {
+    width: 100%;
+    display: none;
+    font-size: 30px;
+    flex-wrap: wrap;
+}
+.catalog__item{
+    padding: 20px 10px;
+    margin: 7px;
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 7px;
+    transition: .4s;
+    cursor: pointer;
+    &-img{
+    }
+    &-title{
+        h2{
+            font-size: 18px;
+            color: #4b4b4b;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 20px 1px #0000004f;
+    }
+    &-btn{
+        margin: auto 0 0 0;
+        a{
+            cursor: default;
+            position: relative;
+            z-index: 2;
+            font-size: 19px;
+            color: #00903a;
+            text-decoration: none;
+            display: block;
+            padding: 11px 16px;
+            border: 2px solid #00903a;
+            border-radius: 6px;
+        }
+    }
+    span{
+        position: absolute;
+        font-size: 14px;
+        top: 11px;
+        left: 11px;
+        color: #d6d0d0;
+    }
+}
+.catalog__item .catalog__item-price{
+    font-size: 19px;
+    display: block;
+    position: static;
+    color: rgb(31, 31, 31)
+}
+
+
+
+.catalog__tab.active{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
