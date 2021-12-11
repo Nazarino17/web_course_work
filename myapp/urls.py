@@ -5,4 +5,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
+    path('make_comment', views.make_comment),
 ]

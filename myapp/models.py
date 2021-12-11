@@ -22,5 +22,9 @@ class Product(models.Model):
 
 class Comment(models.Model):
     id = models.AutoField(primary_key=True)
-    author = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    email = models.CharField(max_length=300)
     text = models.CharField(max_length=500)
+
+    def __str__(self) -> str:
+        return f"{self.name} {self.email}"

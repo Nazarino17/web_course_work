@@ -140,40 +140,24 @@
                     Відгуки покупців
                 </div>
                 <div class="reviews__blog">
+                    {% for comment in comments %}
                     <div class="reviews__item">
                         <div class="reviews__item-img">
                             <img src="/static/img/anonim.png" alt="">
                         </div>
                         <div class="reviews__item-text">
                             <div class="reviews__item-title">
-                                Імя Фамилия
+                                {{comment.name}}
                             </div>
                             <div class="reviews__item-pochta">
-                                Пошта
+                                {{comment.email}}
                             </div>
                         </div>
                         <div class="reviews__item-info">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi reiciendis
-                            adipisci similique dolorem, quia explicabo, quam voluptatem, odit quos totam perferendis
-                            ullam vitae deleniti aliquam id sapiente obcaecati voluptate.
+                            {{comment.text}}
                         </div>
                     </div>
-                    <div class="reviews__item">
-                        <div class="reviews__item-img">
-                            <img src="/static/img/anonim.png" alt="">
-                        </div>
-                        <div class="reviews__item-text">
-                            <div class="reviews__item-title">
-                                Імя Фамилия
-                            </div>
-                        </div>
-                        <div class="reviews__item-info">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi reiciendis
-                            adipisci similique dolorem, quia explicabo, quam voluptatem, odit quos totam perferendis
-                            ullam vitae deleniti aliquam id sapiente obcaecati voluptate.
-                        </div>
-                    </div>
-
+                    {% endfor %}
                 </div>
                 <div class="add-reviews">
                     <a href="#">Додати відгук</a>
@@ -234,17 +218,18 @@
     </div>
 
     <div class="reviews__model">
-        <form action="" id="reviews">
+        <form action="/make_comment" method="POST" id="reviews">
+            {% csrf_token %}
             <p>
                 <label for="name">Ім'я та Прізвище</label>
                 <input type="text" name="name">
             </p>
             <p>
                 <label for="reviews">Пошта</label>
-                <input type="text" name="reviews">
+                <input type="email" name="email">
             </p>
             <p>
-                <textarea name="reviews" id="reviews-text"></textarea>
+                <textarea name="text" id="reviews-text"></textarea>
             </p>
             <button class="reviews__model-btn">
                 Відправити
